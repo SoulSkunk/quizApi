@@ -1,50 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useStore } from "@/store/store";
 
+import categoriesData from "@/data/categories.json";
+
 export default function Categories() {
   //Tableaux d'objet des catégories
-  const categories = [
-    {
-      name: "TV et Cinéma",
-      slug: "tv_cinema",
-      emoji: "📺🎬",
-    },
-    {
-      name: "Art et Littérature",
-      slug: "art_litterature",
-      emoji: "🎨📚",
-    },
-    {
-      name: "Musique",
-      slug: "musique",
-      emoji: "🎵",
-    },
-    {
-      name: "Actualité Politique",
-      slug: "actu_politique",
-      emoji: "📰🏛️",
-    },
-    {
-      name: "Culture Générale",
-      slug: "culture_generale",
-      emoji: "🌍📖",
-    },
-    {
-      name: "Sport",
-      slug: "sport",
-      emoji: "⚽🏅",
-    },
-    {
-      name: "Jeux Vidéos",
-      slug: "jeux_videos",
-      emoji: "🎮",
-    },
-  ];
+  const [categories, setCategories] = useState([]);
 
   const { setSelectedCategory } = useStore();
+
+  //categories contient maintenant toutes les catégories
+  useEffect(() => {
+    setCategories(categoriesData);
+  }, []);
 
   //Function qui capte la catégorie cliquée
   const handleCategorySelect = (category) => {

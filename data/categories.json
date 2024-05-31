@@ -1,0 +1,37 @@
+[
+  {
+    "name": "TV et Cinéma",
+    "slug": "tv_cinema",
+    "emoji": "📺🎬"
+  },
+  {
+    "name": "Art et Littérature",
+    "slug": "art_litterature",
+    "emoji": "🎨📚"
+  },
+  {
+    "name": "Musique",
+    "slug": "musique",
+    "emoji": "🎵"
+  },
+  {
+    "name": "Actualité Politique",
+    "slug": "actu_politique",
+    "emoji": "📰🏛️"
+  },
+  {
+    "name": "Culture Générale",
+    "slug": "culture_generale",
+    "emoji": "🌍📖"
+  },
+  {
+    "name": "Sport",
+    "slug": "sport",
+    "emoji": "⚽🏅"
+  },
+  {
+    "name": "Jeux Vidéos",
+    "slug": "jeux_videos",
+    "emoji": "🎮"
+  }
+]
