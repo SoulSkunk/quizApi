@@ -33,7 +33,7 @@ export default function Categories() {
         {categories.map((category) => (
           <Link key={category.slug} href={`/quiz/${category.slug}`}>
             <div
-              className="cursor-pointer border border-purple-500 rounded-lg p-4 text-center"
+              className="cursor-pointer bg-purple-700 rounded-lg p-4 text-center text-white hover:bg-purple-500 transition-colors"
               onClick={() => handleCategorySelect(category)}
             >
               <div className="text-2xl">{category.emoji}</div>
