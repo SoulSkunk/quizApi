@@ -131,14 +131,14 @@ export default function QuizPage({ params }) {
   const formattedQuestion = formatQuestion(currentQuestion.question);
 
   return (
-    <div className="flex items-center justify-center ">
+    <div className="flex items-center justify-center mt-12 ">
       {/* Left part */}
       <div className="w-2/5 flex items-center justify-center">
         <Image
           src={`/${params.slug}.png`}
           height={950}
           width={800}
-          className="w-full"
+          className="w-full rounded-xl"
           alt={`${params.slug}`}
         />
       </div>
@@ -195,9 +195,9 @@ export default function QuizPage({ params }) {
             </ul>
           </div>
 
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-10 ">
             <button
-              className="p-2 bg-purple-500 text-white rounded-md"
+              className="text-xl p-4 bg-purple-500 text-white rounded-md"
               onClick={handleValidateAnswer}
               disabled={selectedAnswer === null || isAnswered}
             >
