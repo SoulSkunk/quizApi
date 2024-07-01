@@ -3,8 +3,9 @@
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Suspense } from "react";
 
-export default function Register() {
+function RegisterComponent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const score = searchParams.get("score");
@@ -60,5 +61,13 @@ export default function Register() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Register() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RegisterComponent />
+    </Suspense>
   );
 }
